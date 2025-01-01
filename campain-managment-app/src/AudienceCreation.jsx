@@ -63,7 +63,7 @@ const AudienceCreator = () => {
 
       <div style={{ backgroundColor: 'blue', color: 'white', padding: '10px', borderRadius: '5px', marginBottom: '20px' }}>
         You can view the backend code at the following GitHub link: 
-        <a href="https://github.com/Devgarg1302/mini-crm" target="_blank" style={{ color: 'yellow' }}>
+        <a href="https://github.com/Devgarg1302/Campaign/tree/main/mini-crm" target="_blank" style={{ color: 'yellow' }}>
           Backend Code Repository
         </a>
       </div>
