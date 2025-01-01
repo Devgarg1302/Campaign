@@ -8,6 +8,59 @@ function CampaignHistory() {
   const [selectedCampaign, setselectedCampaign] = useState(null);
   const [logs, setlogs] = useState([]);
   
+
+  const sampleCampaigns = [
+    {
+      _id: '1',
+      name: 'Campaign 1',
+      description: 'Description for Campaign 1',
+      group_id: 'group1',
+      created_at: '2023-10-01T00:00:00Z',
+      audienceSize: 1000,
+    },
+    {
+      _id: '2',
+      name: 'Campaign 2',
+      description: 'Description for Campaign 2',
+      group_id: 'group2',
+      created_at: '2023-10-02T00:00:00Z',
+      audienceSize: 2000,
+    },
+  ];
+
+  const sampleGroups = [
+    {
+      group_id: 'group1',
+      group_conditions: { age: { $gte: 18, $lte: 25 }, location: 'USA' },
+    },
+    {
+      group_id: 'group2',
+      group_conditions: { age: { $gte: 26, $lte: 35 }, location: 'Canada' },
+    },
+  ];
+
+  const sampleLogs = [
+    {
+      _id: 'log1',
+      campaignId: '1',
+      audienceSize: 1000,
+      message_sent: 900,
+      message_failed: 100,
+    },
+    {
+      _id: 'log2',
+      campaignId: '2',
+      audienceSize: 2000,
+      message_sent: 1800,
+      message_failed: 200,
+    },
+  ];
+
+  useEffect(() => {
+    setCampaigns(sampleCampaigns);
+    setGroups(sampleGroups);
+  }, []);
+
   const handleCampaignClick = async (campaignId) =>{
     setselectedCampaign(campaignId);
     setlogs([]);

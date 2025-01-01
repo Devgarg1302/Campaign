@@ -7,6 +7,32 @@ const Groups = () => {
   const [loading, setLoading] = useState(false);
   const [audienceSize, setaudienceSize] = useState(null);
 
+
+  // Sample data for testing
+  useEffect(() => {
+    const sampleGroups = [
+      {
+        group_id: '1',
+        group_conditions: {
+          age: { $gte: 18, $lte: 25 },
+          $or: [
+            { totalSpending: { $gt: 100 } },
+            { visits: { $gte: 10 } }
+          ]
+        }
+      },
+      {
+        group_id: '2',
+        group_conditions: {
+          age: { $gte: 26, $lte: 35 },
+          totalSpending: { $gt: 200 }
+        }
+      }
+    ];
+
+    setGroups(sampleGroups);
+  }, []);
+
   // Fetch all groups
   useEffect(() => {
     const fetchGroups = async () => {

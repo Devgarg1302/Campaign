@@ -56,6 +56,18 @@ const AudienceCreator = () => {
 
   return (
     <div>
+
+      <div style={{ backgroundColor: 'red', color: 'white', padding: '10px', borderRadius: '5px', marginBottom: '20px' }}>
+        It is a sample frontend and Server is not deployed. The server is made in Node.js and MongoDB and uses a message broker Kafka.
+      </div>
+
+      <div style={{ backgroundColor: 'blue', color: 'white', padding: '10px', borderRadius: '5px', marginBottom: '20px' }}>
+        You can view the backend code at the following GitHub link: 
+        <a href="https://github.com/Devgarg1302/mini-crm" target="_blank" style={{ color: 'yellow' }}>
+          Backend Code Repository
+        </a>
+      </div>
+
       <h2>Create Audience Segment</h2>
       {conditions.map((condition, conditionIndex) => (
         <div key={conditionIndex} style={{ marginBottom: '20px', border: '1px solid #ddd', padding: '10px' }}>
